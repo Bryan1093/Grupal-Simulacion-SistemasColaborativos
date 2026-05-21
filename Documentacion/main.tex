@@ -1,0 +1,65 @@
+\documentclass{ieeeaccess}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{subcaption}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{bigstrut}
+\renewcommand\IEEEkeywordsname{keywords}
+
+\newcommand{\jal}[1]{\textcolor{blue}{\bf{#1}}}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+\history{Date of publication xxxx 00, 0000, date of current version xxxx 00, 0000.}
+\doi{10.1109/ACCESS.2017.DOI}
+
+\title{Architecture for automatic recognition of group activities using local motions and context}
+\author{\uppercase{Luis Felipe Borja-Borja}\authorrefmark{1}, 
+\uppercase{Jorge Azorin-Lopez\authorrefmark{2}, Marcelo Saval-Calvo\authorrefmark{2}, Andres Fuster-Guillo\authorrefmark{2}, and Marc Sebban}\authorrefmark{3}}
+\address[1]{Fac. Ingenier\'{i}a y Ciencias Aplicadas. Universidad Central del Ecuador, Quito, Ecuador  (e-mail: lborja@uce.edu.ec)}
+\address[2]{Computer Technology Department, University of Alicante, Alicante, Spain (e-mail: jazorin@dtic.ua.es, msaval@dtic.ua.es, fuster@dtic.ua.es)}
+\address[3]{Univ. Lyon, Univ. St-Etienne F-42000, UMR CNRS 5516, Laboratoire Hubert-Curien, France (e-mail: marc.sebban@univ-st-etienne.fr)}
+\tfootnote{This work was supported by the Spanish State Research Agency (AEI) under grant PID2020-119144RB-I00 funded by MCIN/AEI/10.13039/501100011033.}
+
+\markboth
+{Author \headeretal: Preparation of Papers for IEEE TRANSACTIONS and JOURNALS}
+{Author \headeretal: Preparation of Papers for IEEE TRANSACTIONS and JOURNALS}
+
+\corresp{Corresponding author: Jorge Azorin-Lopez (e-mail: jazorin@ua.es).}
+
+\begin{abstract}
+Currently, the ability to automatically detect human behavior in image sequences is one of the most important challenges in the area of computer vision. Within this broad field of knowledge, the recognition of activities of people groups in public areas is receiving special attention due to its importance in many aspects including safety and security. This paper proposes a generic computer vision architecture with the ability to learn and recognize different group activities using mainly the local group's movements. Specifically, a multi-stream deep learning architecture is proposed whose two main streams correspond to a representation based on a descriptor capable of representing the trajectory information of a sequence of images as a collection of local movements that occur in specific regions of the scene. Additional information (e.g. location, time, etc.) to strengthen the classification of activities by including it as additional streams.  The proposed architecture is capable of classifying in a robust way different activities of a group as well to deal with the one-class problems. Moreover, the use of a simple descriptor that transforms a sequence of color images into a sequence of two-image streams can reduce the curse of dimensionality using a deep learning approach. The generic deep learning architecture has been evaluated with different datasets outperforming the state-of-the-art approaches providing an efficient architecture for single and multi-class classification problems.
+\end{abstract}
+
+\begin{keywords}
+Neural Network Architecture, One-Class Classification, Multi-Class Classification
+\end{keywords}
+\maketitle
+
+% Modular Sections
+\input{secciones/01-introduccion.tex}
+\input{secciones/02-estado-arte.tex}
+\input{secciones/03-metodologia.tex}
+\input{secciones/04-arquitectura-instanciada.tex}
+\input{secciones/05-resultados-experimentales.tex}
+\input{secciones/06-conclusiones.tex}
+
+% Bibliography
+\bibliographystyle{plain}
+\bibliography{references}
+
+% Author Biographies
+\input{secciones/07-biografias.tex}
+
+\EOD
+
+\end{document}
